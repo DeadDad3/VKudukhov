@@ -7,8 +7,8 @@ function getCurrentConvoId() {
 
 function extractVkId(input) {
   // Превращаем ссылку вида https://vk.com/xxx в просто xxx
-  if (input.startsWith("https://vk.com/")) {
-    return input.replace("https://vk.com/", "").split(/[/?#]/)[0];
+  if (/^https:\/\/vk\.(com|ru)\//.test(input)) {
+    return input.replace(/^https:\/\/vk\.(com|ru)\//, "").split(/[/?#]/)[0];
   }
   return input;
 }

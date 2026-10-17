@@ -22,7 +22,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://vk.com/im*"],
+      "matches": ["https://vk.com/im*", "https://vk.ru/im*"],
       "js": ["content.js"]
     }
   ]
